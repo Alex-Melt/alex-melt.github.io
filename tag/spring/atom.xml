@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>melt • Posts by &#34;spring&#34; tag</title>
+    <link href="http://example.com" />
+    <updated>2022-08-28T15:13:37.401Z</updated>
+    <category term="Git" />
+    <category term="Node.js" />
+    <category term="Mysql" />
+    <category term="Java" />
+    <category term="JavaWeb" />
+    <category term="Maven" />
+    <category term="Vs-code" />
+    <category term="C++" />
+    <category term="Spring" />
+    <category term="Email" />
+    <category term="Mybatis" />
+    <category term="数据结构" />
+    <category term="LeetCode" />
+    <entry>
+        <id>http://example.com/Spring%E4%BA%8B%E5%8A%A1%E5%B1%9E%E6%80%A7/</id>
+        <title>Spring中事务属性</title>
+        <link rel="alternate" href="http://example.com/Spring%E4%BA%8B%E5%8A%A1%E5%B1%9E%E6%80%A7/"/>
+        <content type="html">&lt;h2 id=&#34;事务属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#事务属性&#34;&gt;#&lt;/a&gt; 事务属性&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;种类：传播行为，隔离级别，只读，事务超时&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h2 id=&#34;传播行为&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#传播行为&#34;&gt;#&lt;/a&gt; 传播行为&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;定义了被调用方法的事务边界&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;传播行为&lt;/th&gt;
+&lt;th&gt;意义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;PROPAGATION_MANDATORY&lt;/td&gt;
+&lt;td&gt;一定要有事务，没有事务就抛出异常&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PROPAGATION_NESTED&lt;/td&gt;
+&lt;td&gt;表示如果当前事务存在，则方法应该运行在一个嵌套事务中。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PROPAGATION_NEVER&lt;/td&gt;
+&lt;td&gt;表示方法不能运行在一个事务中，否则抛出异常&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PROPAGATION_NOT_SUPPORTED&lt;/td&gt;
+&lt;td&gt;不支持事物，如果存在事物就挂起&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PROPAGATION_REQUIRED&lt;/td&gt;
+&lt;td&gt;表示当前方法必须运行在一个事务中，如果当前存在一个事务，那么该方法运行在这个事务中，否则，将创建一个新的事务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PROPAGATION_REQUIRES_NEW&lt;/td&gt;
+&lt;td&gt;表示当前方法必须运行在自己的事务中，如果当前存在一个事务，那么这个事务将在该方法运行期间被挂起&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PROPAGATION_SUPPORTS&lt;/td&gt;
+&lt;td&gt;表示当前方法不需要运行在一个是事务中，但如果有一个事务已经存在，该方法也可以运行在这个事务中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;隔离级别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#隔离级别&#34;&gt;#&lt;/a&gt; 隔离级别&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在操作数据时可能带来 3 个副作用：分别是脏读、不可重复读、幻读。&lt;/p&gt;
+&lt;p&gt;SQL 语句中定义了 4 种隔离级别，分别是未提交读、已提交读、可重复读、可序列化。&lt;/p&gt;
+&lt;p&gt;而在 spring 事务中提供了 5 种隔离级别来对应在 SQL 中定义的 4 种隔离级别，&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;隔离级别&lt;/th&gt;
+&lt;th&gt;意义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ISOLATION_DEFAULT&lt;/td&gt;
+&lt;td&gt;使用后端数据库默认的隔离级别&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ISOLATION_READ_UNCOMMITTED&lt;/td&gt;
+&lt;td&gt;允许读取未提交的数据（对应未提交读），可能导致脏读、不可重复读、幻读&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ISOLATION_READ_COMMITTED&lt;/td&gt;
+&lt;td&gt;允许在一个事务中读取另一个已经提交的事务中的数据（对应已提交读）。可以避免脏读，但是无法避免不可重复读和幻读&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ISOLATION_REPEATABLE_READ&lt;/td&gt;
+&lt;td&gt;一个事务不可能更新由另一个事务修改但尚未提交（回滚）的数据（对应可重复读）。可以避免脏读和不可重复读，但无法避免幻读&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ISOLATION_SERIALIZABLE&lt;/td&gt;
+&lt;td&gt;这种隔离级别是所有的事务都在一个执行队列中，依次顺序执行，而不是并行（对应可序列化）。可以避免脏读、不可重复读、幻读。但是这种隔离级别效率很低，因此，除非必须，否则不建议使用。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;只读&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#只读&#34;&gt;#&lt;/a&gt; 只读&lt;/h2&gt;
+&lt;p&gt;如果在一个事务中所有关于数据库的操作都是只读的，也就是说，这些操作只读取数据库中的数据，而并不更新数据，那么应将事务设为只读模式（ READ_ONLY_MARKER ） , 这样更有利于数据库进行优化 。&lt;/p&gt;
+&lt;p&gt;因为只读的优化措施是事务启动后由数据库实施的，因此，只有将那些具有可能启动新事务的传播行为 (PROPAGATION_NESTED 、 PROPAGATION_REQUIRED 、 PROPAGATION_REQUIRED_NEW) 的方法的事务标记成只读才有意义。&lt;/p&gt;
+&lt;p&gt;如果使用 Hibernate 作为持久化机制，那么将事务标记为只读后，会将 Hibernate 的 flush 模式设置为 FULSH_NEVER, 以告诉 Hibernate 避免和数据库之间进行不必要的同步，并将所有更新延迟到事务结束。&lt;/p&gt;
+&lt;h2 id=&#34;事务延时&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#事务延时&#34;&gt;#&lt;/a&gt; 事务延时&lt;/h2&gt;
+&lt;p&gt;如果一个事务长时间运行，这时为了尽量避免浪费系统资源，应为这个事务设置一个有效时间，使其等待数秒后自动回滚。与设置 “只读” 属性一样，事务有效属性也需要给那些具有可能启动新事物的传播行为的方法的事务标记成只读才有意义。&lt;/p&gt;
+</content>
+        <category term="Spring" />
+        <updated>2022-08-28T15:13:37.401Z</updated>
+    </entry>
+</feed>
