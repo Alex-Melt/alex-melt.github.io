@@ -16,8 +16,8 @@
     <category term="Email" />
     <category term="数据结构" />
     <category term="Mybatis" />
-    <category term="LeetCode" />
     <category term="Python" />
+    <category term="LeetCode" />
     <entry>
         <id>http://example.com/Spring%E4%BA%8B%E5%8A%A1%E5%B1%9E%E6%80%A7/</id>
         <title>Spring中事务属性</title>

@@ -16,8 +16,8 @@
     <category term="Email" />
     <category term="数据结构" />
     <category term="Mybatis" />
-    <category term="LeetCode" />
     <category term="Python" />
+    <category term="LeetCode" />
     <entry>
         <id>http://example.com/%E5%9F%BA%E4%BA%8EMybatis%E7%9A%84log4j%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</id>
         <title>基于Mybatis的log4j配置文件</title>
