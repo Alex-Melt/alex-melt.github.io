@@ -17,9 +17,10 @@
         <category>Vs-code</category>
         <category>C++</category>
         <category>Email</category>
-        <category>Mybatis</category>
         <category>数据结构</category>
+        <category>Mybatis</category>
         <category>LeetCode</category>
+        <category>Python</category>
         <item>
             <guid isPermalink="true">http://example.com/MySQL%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%EF%BC%88%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%89%88%E6%9C%AC%EF%BC%89/</guid>
             <title>MySQL的安装与配置（命令行版本）</title>

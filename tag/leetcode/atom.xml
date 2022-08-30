@@ -14,9 +14,10 @@
     <category term="Vs-code" />
     <category term="C++" />
     <category term="Email" />
-    <category term="Mybatis" />
     <category term="数据结构" />
+    <category term="Mybatis" />
     <category term="LeetCode" />
+    <category term="Python" />
     <entry>
         <id>http://example.com/arithmetic/LeetCode-169%E5%A4%9A%E6%95%B0%E4%B9%8B%E5%92%8C/</id>
         <title>LeetCode-169多数之和</title>

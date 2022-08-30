@@ -17,9 +17,10 @@
         <category>Vs-code</category>
         <category>C++</category>
         <category>Email</category>
-        <category>Mybatis</category>
         <category>数据结构</category>
+        <category>Mybatis</category>
         <category>LeetCode</category>
+        <category>Python</category>
         <item>
             <guid isPermalink="true">http://example.com/arithmetic/LeetCode-169%E5%A4%9A%E6%95%B0%E4%B9%8B%E5%92%8C/</guid>
             <title>LeetCode-169多数之和</title>

@@ -14,9 +14,10 @@
     <category term="Vs-code" />
     <category term="C++" />
     <category term="Email" />
-    <category term="Mybatis" />
     <category term="数据结构" />
+    <category term="Mybatis" />
     <category term="LeetCode" />
+    <category term="Python" />
     <entry>
         <id>http://example.com/%E5%9F%BA%E4%BA%8EJavaWeb%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</id>
         <title>基于JavaWeb的文件上传</title>

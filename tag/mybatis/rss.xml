@@ -17,9 +17,10 @@
         <category>Vs-code</category>
         <category>C++</category>
         <category>Email</category>
-        <category>Mybatis</category>
         <category>数据结构</category>
+        <category>Mybatis</category>
         <category>LeetCode</category>
+        <category>Python</category>
         <item>
             <guid isPermalink="true">http://example.com/%E5%9F%BA%E4%BA%8EMybatis%E7%9A%84log4j%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</guid>
             <title>基于Mybatis的log4j配置文件</title>

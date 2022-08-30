@@ -1,0 +1,607 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="melt" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="melt" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="melt" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Python" />
+
+
+<link rel="canonical" href="http://example.com/computer-science/python/day4/">
+
+
+
+  <title>
+day4 - 计算机科学，Python |
+Melt = melt</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">day4
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-08-30 12:39:38">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-08-30T12:39:38+08:00">2022-08-30</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>4.9k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Melt</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%EF%BC%8CPython/" itemprop="item" rel="index" title="分类于 计算机科学，Python"><span itemprop="name">计算机科学，Python</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/computer-science/python/day4/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="赵浩栋">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="melt">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="八大排序"><a class="markdownIt-Anchor" href="#八大排序">#</a> 八大排序</h1>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 冒泡排序</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token list punctuation">2.</span> 选择排序</pre></td></tr></table></figure><h2 id="列表"><a class="markdownIt-Anchor" href="#列表">#</a> 列表</h2>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>列表：list   是一个类是一个对象</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token list punctuation">1.</span> 存储多个数据，有没有上限？理论上没有长度限制</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">2.</span> 存储多种数据</pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token list punctuation">3.</span> 是一个可迭代对象</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">4.</span> 列表是一个可变类型的数据</pre></td></tr><tr><td data-num="6"></td><td><pre>不可变类型</pre></td></tr></table></figure><h3 id="创建列表"><a class="markdownIt-Anchor" href="#创建列表">#</a> 创建列表</h3>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 直接创建</pre></td></tr><tr><td data-num="2"></td><td><pre>	l = [元素1,元素2,...,元素n]</pre></td></tr><tr><td data-num="3"></td><td><pre>		<span class="token list punctuation">1.</span> 普通列表：[1,2,3,4]整型列表，['a','b','c','d']字符串列表</pre></td></tr><tr><td data-num="4"></td><td><pre>		<span class="token list punctuation">2.</span> 混合列表：[1,2,'a','b',[1,2,3]]</pre></td></tr><tr><td data-num="5"></td><td><pre>		<span class="token list punctuation">3.</span> l = []:空列表</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token list punctuation">2.</span> 通过构造方法来创建</pre></td></tr><tr><td data-num="7"></td><td><pre>		<span class="token list punctuation">1.</span> list():返回一个空的列表</pre></td></tr><tr><td data-num="8"></td><td><pre>		<span class="token list punctuation">2.</span> list(iterable)：从可迭代对象中的元素，初始化一个列表</pre></td></tr></table></figure><h4 id="访问列表里面的元素"><a class="markdownIt-Anchor" href="#访问列表里面的元素">#</a> 访问列表里面的元素</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>访问：读、改、删</pre></td></tr><tr><td data-num="2"></td><td><pre>读取元素：</pre></td></tr><tr><td data-num="3"></td><td><pre>	<span class="token list punctuation">1.</span> 通过索引来获取元素</pre></td></tr><tr><td data-num="4"></td><td><pre>		索引：下标</pre></td></tr><tr><td data-num="5"></td><td><pre>		索引不是下标</pre></td></tr><tr><td data-num="6"></td><td><pre>		python中索引是从0开始技术</pre></td></tr><tr><td data-num="7"></td><td><pre>		访问形式：</pre></td></tr><tr><td data-num="8"></td><td><pre>		变量[下标]---访问一个元素</pre></td></tr><tr><td data-num="9"></td><td><pre>	<span class="token list punctuation">2.</span> 读取所有的元素</pre></td></tr><tr><td data-num="10"></td><td><pre>		遍历：所有的元素不重复、不遗漏的访问一遍</pre></td></tr><tr><td data-num="11"></td><td><pre>		通过for来进行遍历</pre></td></tr><tr><td data-num="12"></td><td><pre>	<span class="token list punctuation">3.</span> 如果下标超出了范围则会报错</pre></td></tr><tr><td data-num="13"></td><td><pre>		列表的长度：</pre></td></tr><tr><td data-num="14"></td><td><pre>		列表的下标范围：</pre></td></tr><tr><td data-num="15"></td><td><pre>			0<span class="token strike"><span class="token punctuation">~</span><span class="token content">len(l)-1</pre></td></tr><tr><td data-num="16"></td><td><pre>		列表的索引支持负数</pre></td></tr><tr><td data-num="17"></td><td><pre>		负号：代表的是方向（反向）</pre></td></tr><tr><td data-num="18"></td><td><pre>		-1</span><span class="token punctuation">~</span></span>-len(l)</pre></td></tr></table></figure><h4 id="螺旋填数"><a class="markdownIt-Anchor" href="#螺旋填数">#</a> 螺旋填数</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>螺旋填数：读入两个整数m,n，输出一个m行n列的矩阵，这个矩阵是1~m * n这些自然数按照右、下、左、上螺旋填入的结果。</pre></td></tr></table></figure><h4 id="向列表中添加元素"><a class="markdownIt-Anchor" href="#向列表中添加元素">#</a> 向列表中添加元素</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> append(obj):</pre></td></tr><tr><td data-num="2"></td><td><pre>	向列表的末尾添加一个obj</pre></td></tr><tr><td data-num="3"></td><td><pre>	object：对象，在python可以是任何数据</pre></td></tr><tr><td data-num="4"></td><td><pre>	用于添加一个数据</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">2.</span> extend(iterable):</pre></td></tr><tr><td data-num="6"></td><td><pre>	通过可迭代对象的元素，来扩展当前的列表</pre></td></tr><tr><td data-num="7"></td><td><pre>	iterable：可迭代对象</pre></td></tr><tr><td data-num="8"></td><td><pre>	用于向列表中添加多个数据</pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token list punctuation">3.</span> insert(index,object)</pre></td></tr><tr><td data-num="10"></td><td><pre>	在index之前插入object</pre></td></tr><tr><td data-num="11"></td><td><pre>	index：索引值(下标)</pre></td></tr><tr><td data-num="12"></td><td><pre>	object：任何对象</pre></td></tr></table></figure><h4 id="修改列表中的元素"><a class="markdownIt-Anchor" href="#修改列表中的元素">#</a> 修改列表中的元素</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>直接赋值修改</pre></td></tr><tr><td data-num="2"></td><td><pre>	变量[下标] = 新值</pre></td></tr></table></figure><h4 id="删除列表中的元素"><a class="markdownIt-Anchor" href="#删除列表中的元素">#</a> 删除列表中的元素</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> clear():</pre></td></tr><tr><td data-num="2"></td><td><pre>	清空列表中的所有元素</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">2.</span> pop([index])：弹栈</pre></td></tr><tr><td data-num="4"></td><td><pre>	删除并且返回下标为index的元素(index默认为最后一个)</pre></td></tr><tr><td data-num="5"></td><td><pre>	如果为空列表则会抛出IndexError</pre></td></tr><tr><td data-num="6"></td><td><pre>	栈：是一种数据结构，FILO：First In Last Out</pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token list punctuation">3.</span> remove(value):</pre></td></tr><tr><td data-num="8"></td><td><pre>	删除第一个出现的value元素（下标最小）</pre></td></tr><tr><td data-num="9"></td><td><pre>	如果value不存在会报ValueError</pre></td></tr></table></figure><h4 id="切片"><a class="markdownIt-Anchor" href="#切片">#</a> 切片</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>slice：切片</pre></td></tr><tr><td data-num="2"></td><td><pre>列表通过索引可以获取一个元素,索引处可以接收更多的参数。</pre></td></tr><tr><td data-num="3"></td><td><pre>l=[1,2,3,4,5]</pre></td></tr><tr><td data-num="4"></td><td><pre>l[2:4]</pre></td></tr><tr><td data-num="5"></td><td><pre>作用：通过起始下标和结束下标获取一段元素(多个元素)，该数据是拷贝出来的数据，原数据不变</pre></td></tr><tr><td data-num="6"></td><td><pre>语法：</pre></td></tr><tr><td data-num="7"></td><td><pre>	变量[start:end]</pre></td></tr><tr><td data-num="8"></td><td><pre>	start：起始下标</pre></td></tr><tr><td data-num="9"></td><td><pre>	end：结束下标</pre></td></tr><tr><td data-num="10"></td><td><pre>	取值：[start:stop)</pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token list punctuation">1.</span> 如果start为0那么可以不写</pre></td></tr><tr><td data-num="12"></td><td><pre>	list[:3]</pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token list punctuation">2.</span> 如果要直接获取到最后一个元素</pre></td></tr><tr><td data-num="14"></td><td><pre>	list[2:]</pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token list punctuation">3.</span> 如果要全取：</pre></td></tr><tr><td data-num="16"></td><td><pre>	list[:]</pre></td></tr><tr><td data-num="17"></td><td><pre>切片操作往往用于数据的拷贝</pre></td></tr></table></figure><ul>
+<li>切片的高级应用</li>
+</ul>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>切片还支持第三个参数，表示步长</pre></td></tr><tr><td data-num="2"></td><td><pre>变量[start:end:step]</pre></td></tr><tr><td data-num="3"></td><td><pre>start:起始下标</pre></td></tr><tr><td data-num="4"></td><td><pre>end:结束下标</pre></td></tr><tr><td data-num="5"></td><td><pre>step:步长</pre></td></tr></table></figure><h4 id="列表的常用运算符"><a class="markdownIt-Anchor" href="#列表的常用运算符">#</a> 列表的常用运算符</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 加法运算</pre></td></tr><tr><td data-num="2"></td><td><pre>	list1+list2----列表的拼接</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">2.</span> 比较运算(布尔运算)</pre></td></tr><tr><td data-num="4"></td><td><pre>	>,>=,&lt;,&lt;=,==,!=</pre></td></tr><tr><td data-num="5"></td><td><pre>	比较原则：对应下标的元素，按照下标从小到大逐个比较，只要比较出大小则停止比较</pre></td></tr><tr><td data-num="6"></td><td><pre>	需要注意类型的兼容性</pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token list punctuation">3.</span> 重复运算</pre></td></tr><tr><td data-num="8"></td><td><pre>	乘法</pre></td></tr><tr><td data-num="9"></td><td><pre>	本质：是多个加法运算</pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token list punctuation">4.</span> 成员关系运算:in/not in </pre></td></tr><tr><td data-num="11"></td><td><pre>	判断列表中是否有某个成员</pre></td></tr></table></figure><ul>
+<li>列表中的其他方法</li>
+</ul>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> copy()</pre></td></tr><tr><td data-num="2"></td><td><pre>	浅拷贝</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">2.</span> count(value)</pre></td></tr><tr><td data-num="4"></td><td><pre>	返回value值在列表中出现的次数</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">3.</span> index(value[,start[,stop]])</pre></td></tr><tr><td data-num="6"></td><td><pre>	返回value在列表中从start到stop的范围内的第一次出现的索引</pre></td></tr><tr><td data-num="7"></td><td><pre>	value：要查询的值</pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token list punctuation">4.</span> reverse()</pre></td></tr><tr><td data-num="9"></td><td><pre>	原地翻转</pre></td></tr><tr><td data-num="10"></td><td><pre>	和大小无关，不排序</pre></td></tr></table></figure><ul>
+<li>补充</li>
+</ul>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 列表中的所有元素，本质上都不是数据本身，而是数据的首地址</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token list punctuation">2.</span> 列表作为可变类型的数据</pre></td></tr><tr><td data-num="3"></td><td><pre>		可变：当列表中的内容发生改变的时候，列表本身的地址不发生改变，但是列表中的元素发生改变。</pre></td></tr></table></figure><h2 id="二维列表"><a class="markdownIt-Anchor" href="#二维列表">#</a> 二维列表</h2>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>维度：</pre></td></tr><tr><td data-num="2"></td><td><pre>	[[1,2,3],[4,5,6],[4,5,6],[4,5,6],[4,5,6],[4,5,6],[4,5,6]]</pre></td></tr><tr><td data-num="3"></td><td><pre>二维列表：一维列表下的一堆列表(一维列表)</pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>二维列表的访问：</pre></td></tr><tr><td data-num="6"></td><td><pre>	<span class="token list punctuation">1.</span> 直接访问</pre></td></tr><tr><td data-num="7"></td><td><pre>		访问一个元素可以通过下标进行访问</pre></td></tr><tr><td data-num="8"></td><td><pre>		list<span class="token url">[<span class="token content">行坐标</span>][<span class="token variable">列坐标</span>]</span></pre></td></tr><tr><td data-num="9"></td><td><pre>	<span class="token list punctuation">2.</span> 双重for循环</pre></td></tr></table></figure><ul>
+<li>二维列表的创建</li>
+</ul>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>l = [[1,2,3]]</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>l = []</pre></td></tr><tr><td data-num="4"></td><td><pre>l.append([123])</pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre>[list()]</pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre>列表的推导式/生成式</pre></td></tr><tr><td data-num="9"></td><td><pre>l = [i for i in range(10)]</pre></td></tr><tr><td data-num="10"></td><td><pre>print(l)</pre></td></tr></table></figure><h1 id="元组"><a class="markdownIt-Anchor" href="#元组">#</a> 元组</h1>
+<h4 id="圆括号"><a class="markdownIt-Anchor" href="#圆括号">#</a> 圆括号</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> ():可以修改运算的优先级</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token list punctuation">2.</span> 元组的组成部分</pre></td></tr></table></figure><h4 id="元组-2"><a class="markdownIt-Anchor" href="#元组-2">#</a> 元组</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 可以存储多个数据</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token list punctuation">2.</span> 可以存储多种数据</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">3.</span> 是不可变类型</pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token list punctuation">4.</span> 支持切片操作</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">5.</span> 可迭代对象</pre></td></tr></table></figure><h4 id="创建一个元组"><a class="markdownIt-Anchor" href="#创建一个元组">#</a> 创建一个元组</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 直接创建</pre></td></tr><tr><td data-num="2"></td><td><pre>	t = (1,2,3)</pre></td></tr><tr><td data-num="3"></td><td><pre>	t = (True,1,2,3)</pre></td></tr><tr><td data-num="4"></td><td><pre>	t = ()</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">2.</span> 构造方法</pre></td></tr><tr><td data-num="6"></td><td><pre>	<span class="token list punctuation">1.</span> tuple()---返回一个空元组</pre></td></tr><tr><td data-num="7"></td><td><pre>	<span class="token list punctuation">2.</span> tuple(iterable)</pre></td></tr><tr><td data-num="8"></td><td><pre>		利用可迭代对象的元素，初始化一个新的元组</pre></td></tr></table></figure><h4 id="访问元组"><a class="markdownIt-Anchor" href="#访问元组">#</a> 访问元组</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 访问一个元素</pre></td></tr><tr><td data-num="2"></td><td><pre>	和列表一样</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">2.</span> 访问多个元素</pre></td></tr><tr><td data-num="4"></td><td><pre>	和列表一样</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">3.</span> 访问所有元素</pre></td></tr><tr><td data-num="6"></td><td><pre>	和列表一样</pre></td></tr></table></figure><figure class="highlight c"><figcaption data-lang="c"></figcaption><table><tr><td data-num="1"></td><td><pre>include <span class="token operator">&lt;</span>stdio<span class="token punctuation">.</span>h<span class="token operator">></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">void</span> <span class="token function">mian</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span>b<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">int</span> d1<span class="token punctuation">,</span>d2<span class="token punctuation">,</span>d3<span class="token punctuation">,</span>d4<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    d1 <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token operator">&lt;</span>b<span class="token punctuation">)</span><span class="token operator">||</span><span class="token punctuation">(</span><span class="token operator">++</span>a<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">||</span><span class="token punctuation">(</span>c<span class="token operator">></span>b<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"d1=%d,a=%d,v=%d,c=%d\n"</span><span class="token punctuation">,</span>d1<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    d2 <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token operator">></span>b<span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span><span class="token operator">++</span>a<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">||</span><span class="token punctuation">(</span>c<span class="token operator">></span>b<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"d1=%d,a=%d,v=%d,c=%d\n"</span><span class="token punctuation">,</span>d2<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    d3 <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token operator">&lt;</span>b<span class="token punctuation">)</span><span class="token operator">||</span><span class="token punctuation">(</span><span class="token operator">++</span>a<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>c<span class="token operator">></span>b<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"d1=%d,a=%d,v=%d,c=%d\n"</span><span class="token punctuation">,</span>d3<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    d4 <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token operator">></span>b<span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span><span class="token operator">++</span>a<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>c<span class="token operator">></span>b<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"d1=%d,a=%d,v=%d,c=%d\n"</span><span class="token punctuation">,</span>d4<span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h4 id="增加和修改以及删除元素"><a class="markdownIt-Anchor" href="#增加和修改以及删除元素">#</a> 增加和修改以及删除元素</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">*</span> 元组是不可变类型，所以，本身不支持增删改操作</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">1.</span> 向元组中添加元素</pre></td></tr><tr><td data-num="4"></td><td><pre>		利用切片然后元组拼接</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">2.</span> 从元组中删除元素</pre></td></tr><tr><td data-num="6"></td><td><pre>		利用切片删除元素</pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token list punctuation">3.</span> 修改元组中的元素</pre></td></tr><tr><td data-num="8"></td><td><pre>		先删除，后添加</pre></td></tr></table></figure><h4 id="元组的操作符"><a class="markdownIt-Anchor" href="#元组的操作符">#</a> 元组的操作符</h4>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 拼接操作</pre></td></tr><tr><td data-num="2"></td><td><pre>	+</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">2.</span> 重复操作</pre></td></tr><tr><td data-num="4"></td><td><pre>	<span class="token list punctuation">*</span> ：本质是多个加法</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">3.</span> 布尔操作：</pre></td></tr><tr><td data-num="6"></td><td><pre>	>,&lt;,==,!==</pre></td></tr><tr><td data-num="7"></td><td><pre>	比较方法和列表一样</pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token list punctuation">4.</span> 成员关系运算</pre></td></tr><tr><td data-num="9"></td><td><pre>	in/not in</pre></td></tr></table></figure><h1 id="字符串"><a class="markdownIt-Anchor" href="#字符串">#</a> 字符串</h1>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>最常用的数据类型，没有之一</pre></td></tr><tr><td data-num="2"></td><td><pre>str</pre></td></tr><tr><td data-num="3"></td><td><pre>特点：</pre></td></tr><tr><td data-num="4"></td><td><pre>	<span class="token list punctuation">1.</span> 天生就具有跨平台性</pre></td></tr><tr><td data-num="5"></td><td><pre>	<span class="token list punctuation">2.</span> 是一个可迭代对象</pre></td></tr><tr><td data-num="6"></td><td><pre>	<span class="token list punctuation">3.</span> 支持索引操作</pre></td></tr><tr><td data-num="7"></td><td><pre>	<span class="token list punctuation">4.</span> 支持切片操作</pre></td></tr><tr><td data-num="8"></td><td><pre>	<span class="token list punctuation">5.</span> 是一个不可变类型</pre></td></tr></table></figure><ul>
+<li>字符串的类别</li>
+</ul>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 单引号字符串</pre></td></tr><tr><td data-num="2"></td><td><pre>	其他语言：字符串必须使用双引号，单引号只能用于字符</pre></td></tr><tr><td data-num="3"></td><td><pre>	python：允许使用单引号来表达字符串</pre></td></tr><tr><td data-num="4"></td><td><pre>	简单，可以和双引号进行嵌套</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">2.</span> 双引号字符串</pre></td></tr><tr><td data-num="6"></td><td><pre>	一般字符串</pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token list punctuation">3.</span> 三引号字符串</pre></td></tr><tr><td data-num="8"></td><td><pre>	多行字符串</pre></td></tr><tr><td data-num="9"></td><td><pre>	单三引号、双三引号</pre></td></tr><tr><td data-num="10"></td><td><pre>	一般用于文档注释，必须出现在代码块的第一行</pre></td></tr><tr><td data-num="11"></td><td><pre>	也成为长字符串可以换行</pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token list punctuation">4.</span> 原始字符串</pre></td></tr><tr><td data-num="13"></td><td><pre>	让所有的转义字符全部失效（只体现最原本的含义）</pre></td></tr><tr><td data-num="14"></td><td><pre>	s = r'Jerry\tom'</pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token list punctuation">5.</span> 二进制字符串</pre></td></tr><tr><td data-num="16"></td><td><pre>	不是字符串类型，是bytes类型</pre></td></tr><tr><td data-num="17"></td><td><pre>	str---bytes:encode()编码</pre></td></tr><tr><td data-num="18"></td><td><pre>	bytes---str:decode()解码</pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token list punctuation">6.</span> unicode字符串</pre></td></tr><tr><td data-num="20"></td><td><pre>	以unicode的方式来解析字符串</pre></td></tr><tr><td data-num="21"></td><td><pre>	u'abc'</pre></td></tr></table></figure><ul>
+<li>创建字符串</li>
+</ul>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 直接创建：</pre></td></tr><tr><td data-num="2"></td><td><pre>	s = 'abc'</pre></td></tr><tr><td data-num="3"></td><td><pre>	s = "abc"</pre></td></tr><tr><td data-num="4"></td><td><pre>	s = """abc"""</pre></td></tr><tr><td data-num="5"></td><td><pre>	s = '''abc'''</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token list punctuation">2.</span> 构造方法</pre></td></tr><tr><td data-num="7"></td><td><pre>	str(obj)</pre></td></tr><tr><td data-num="8"></td><td><pre>	object：可以接收任何参数</pre></td></tr><tr><td data-num="9"></td><td><pre>	input和print</pre></td></tr><tr><td data-num="10"></td><td><pre>	console.log("")</pre></td></tr></table></figure><ul>
+<li>访问字符串</li>
+</ul>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 访问一个</pre></td></tr><tr><td data-num="2"></td><td><pre>	通过索引</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">2.</span> 访问多个</pre></td></tr><tr><td data-num="4"></td><td><pre>	通过切片</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">3.</span> 访问所有</pre></td></tr><tr><td data-num="6"></td><td><pre>	遍历</pre></td></tr></table></figure><h3 id="图书管理系统"><a class="markdownIt-Anchor" href="#图书管理系统">#</a> 图书管理系统</h3>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> 首页：登录注册，用户输入1则登录，输入2则注册</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token list punctuation">2.</span> 登录：</pre></td></tr><tr><td data-num="3"></td><td><pre>	<span class="token list punctuation">1.</span> 提示用户输入用户名</pre></td></tr><tr><td data-num="4"></td><td><pre>	<span class="token list punctuation">2.</span> 提示用户输入密码</pre></td></tr><tr><td data-num="5"></td><td><pre>	<span class="token list punctuation">3.</span> 判断用户输入的用户名和密码是否正确</pre></td></tr><tr><td data-num="6"></td><td><pre>	<span class="token list punctuation">4.</span> 如果输入正确，则成功登录</pre></td></tr><tr><td data-num="7"></td><td><pre>	<span class="token list punctuation">5.</span> 如果输入不正确，则重新登录</pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token list punctuation">3.</span> 注册：</pre></td></tr><tr><td data-num="9"></td><td><pre>	<span class="token list punctuation">1.</span> 提示用户输入用户名</pre></td></tr><tr><td data-num="10"></td><td><pre>		<span class="token list punctuation">1.</span> 不允许出现特殊字符</pre></td></tr><tr><td data-num="11"></td><td><pre>		<span class="token list punctuation">2.</span> 大于等于四个字儿</pre></td></tr><tr><td data-num="12"></td><td><pre>	<span class="token list punctuation">2.</span> 提示用户输入密码</pre></td></tr><tr><td data-num="13"></td><td><pre>		<span class="token list punctuation">1.</span> 用户密码需要分为高级、中级、低级</pre></td></tr><tr><td data-num="14"></td><td><pre>			除了下面三种情况，剩下的情况全都不合规</pre></td></tr><tr><td data-num="15"></td><td><pre>			高级：用户密码是大于14位，且由数字、字符、字母构成</pre></td></tr><tr><td data-num="16"></td><td><pre>			中级：用户密码是大于8位小于14位，且由数字、字符、字母中的任意两个组合构成</pre></td></tr><tr><td data-num="17"></td><td><pre>			低级：用户密码大于6位，小于8位</pre></td></tr><tr><td data-num="18"></td><td><pre>	<span class="token list punctuation">3.</span> 提示用户再次输入密码</pre></td></tr><tr><td data-num="19"></td><td><pre>	<span class="token list punctuation">4.</span> 如果全部合规，则注册成功</pre></td></tr><tr><td data-num="20"></td><td><pre>	<span class="token list punctuation">5.</span> 如果不合规，则重新输入</pre></td></tr><tr><td data-num="21"></td><td><pre><span class="token list punctuation">4.</span> 进入图书管理系统：</pre></td></tr><tr><td data-num="22"></td><td><pre>	<span class="token list punctuation">1.</span> 查看所有图书</pre></td></tr><tr><td data-num="23"></td><td><pre>	<span class="token list punctuation">2.</span> 根据书名查找图书</pre></td></tr><tr><td data-num="24"></td><td><pre>	<span class="token list punctuation">3.</span> 根据作者查找图书</pre></td></tr><tr><td data-num="25"></td><td><pre>	<span class="token list punctuation">4.</span> 修改图书名称 </pre></td></tr><tr><td data-num="26"></td><td><pre>	<span class="token list punctuation">5.</span> 修改图书价格</pre></td></tr><tr><td data-num="27"></td><td><pre>	<span class="token list punctuation">6.</span> 删除图书</pre></td></tr><tr><td data-num="28"></td><td><pre>	<span class="token list punctuation">7.</span> 增加新书</pre></td></tr></table></figure><h3 id="常用的方法"><a class="markdownIt-Anchor" href="#常用的方法">#</a> 常用的方法</h3>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token list punctuation">1.</span> capitalize()</pre></td></tr><tr><td data-num="2"></td><td><pre>	首字母大写，其余字符小写</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">2.</span> casefold()</pre></td></tr><tr><td data-num="4"></td><td><pre>	字母全小写</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">3.</span> center(字符长度,填充物)</pre></td></tr><tr><td data-num="6"></td><td><pre>	center(20, '-')</pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token list punctuation">4.</span> count()</pre></td></tr><tr><td data-num="8"></td><td><pre>	count(sub[, start[, end]])</pre></td></tr><tr><td data-num="9"></td><td><pre>	计算字符串中出现了多少sub元素</pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token list punctuation">5.</span> encode()</pre></td></tr><tr><td data-num="11"></td><td><pre>	编码</pre></td></tr><tr><td data-num="12"></td><td><pre>	把字符串编成二进制的内容</pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token list punctuation">6.</span> endswith(suffix[, start[, end]])</pre></td></tr><tr><td data-num="14"></td><td><pre>	是否以suffix结尾</pre></td></tr><tr><td data-num="15"></td><td><pre>	endswith('系统',0,10)</pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token list punctuation">7.</span> find(sub[, start[, end]])</pre></td></tr><tr><td data-num="17"></td><td><pre>	找到在start和end之间的第一个sub元素的下标，如果不存在，则返回-1</pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token list punctuation">8.</span> index(sub[, start[, end]])</pre></td></tr><tr><td data-num="19"></td><td><pre>	如果sub在字符串中，则返回最小的下标</pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token list punctuation">9.</span> isalnum()</pre></td></tr><tr><td data-num="21"></td><td><pre>	注：问一下</pre></td></tr><tr><td data-num="22"></td><td><pre>	人类语言都为True，其他的为false</pre></td></tr><tr><td data-num="23"></td><td><pre><span class="token list punctuation">10.</span> isalpha()</pre></td></tr><tr><td data-num="24"></td><td><pre>	注：问一下</pre></td></tr><tr><td data-num="25"></td><td><pre>	人类语言字母都为True，其他的为false</pre></td></tr><tr><td data-num="26"></td><td><pre><span class="token list punctuation">11.</span> isdecimal()</pre></td></tr><tr><td data-num="27"></td><td><pre>	十进制数字</pre></td></tr><tr><td data-num="28"></td><td><pre>	判断字符中是否都是十进制阿拉伯数字</pre></td></tr><tr><td data-num="29"></td><td><pre><span class="token list punctuation">12.</span> isdigit()</pre></td></tr><tr><td data-num="30"></td><td><pre>	判断是否都是十进制数字</pre></td></tr><tr><td data-num="31"></td><td><pre><span class="token list punctuation">13.</span> islower()</pre></td></tr><tr><td data-num="32"></td><td><pre>	判断当前字符串是否全都是小写</pre></td></tr><tr><td data-num="33"></td><td><pre><span class="token list punctuation">14.</span> isnumeric()</pre></td></tr><tr><td data-num="34"></td><td><pre>	判断当前字符是否是由数字(只包含中文和阿拉伯，不包含英文)构成的</pre></td></tr><tr><td data-num="35"></td><td><pre><span class="token list punctuation">15.</span> isspace()</pre></td></tr><tr><td data-num="36"></td><td><pre>	判断是否全是空格</pre></td></tr><tr><td data-num="37"></td><td><pre><span class="token list punctuation">16.</span> isupper()</pre></td></tr><tr><td data-num="38"></td><td><pre>	判断字符串是否全都是大写</pre></td></tr><tr><td data-num="39"></td><td><pre><span class="token list punctuation">17.</span> ljust(width[,fillchar])</pre></td></tr><tr><td data-num="40"></td><td><pre>	s.ljust(10,'-')</pre></td></tr><tr><td data-num="41"></td><td><pre><span class="token list punctuation">18.</span> rjust(width[,fillchar])</pre></td></tr><tr><td data-num="42"></td><td><pre>	s.rjust(10,'-')</pre></td></tr><tr><td data-num="43"></td><td><pre><span class="token list punctuation">19.</span> lstrip():</pre></td></tr><tr><td data-num="44"></td><td><pre>	去掉字符串左侧的空格、回车、指标等空字符</pre></td></tr><tr><td data-num="45"></td><td><pre><span class="token list punctuation">20.</span> rstrip():</pre></td></tr><tr><td data-num="46"></td><td><pre>	去掉字符串右侧的空格、回车、指标等空字符</pre></td></tr><tr><td data-num="47"></td><td><pre><span class="token list punctuation">21.</span> strip():</pre></td></tr><tr><td data-num="48"></td><td><pre>	去掉字符串两侧的空格、回车、指标等空字符</pre></td></tr><tr><td data-num="49"></td><td><pre><span class="token list punctuation">22.</span> replace(old,new):</pre></td></tr><tr><td data-num="50"></td><td><pre>	替换</pre></td></tr><tr><td data-num="51"></td><td><pre>	把字符串中的old替换成new</pre></td></tr><tr><td data-num="52"></td><td><pre><span class="token list punctuation">23.</span> startswith(prefix)</pre></td></tr><tr><td data-num="53"></td><td><pre>	判断是否是以prefix开头的字符串</pre></td></tr><tr><td data-num="54"></td><td><pre><span class="token list punctuation">24.</span> upper()</pre></td></tr><tr><td data-num="55"></td><td><pre>	将字符串转为大写</pre></td></tr></table></figure><ul>
+<li>格式化</li>
+</ul>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>format(<span class="token italic"><span class="token punctuation">*</span><span class="token content">args, </span><span class="token punctuation">*</span></span>*kwargs)</pre></td></tr><tr><td data-num="2"></td><td><pre>	<span class="token italic"><span class="token punctuation">*</span><span class="token content">args：可变长参数，把参数打包成元组来处理</pre></td></tr><tr><td data-num="3"></td><td><pre>	</span><span class="token punctuation">*</span></span>kwargs：关键字参数，把参数打包成字典来处理</pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token list punctuation">1.</span> 源字符通过下标的方式进行填充获取</pre></td></tr><tr><td data-num="5"></td><td><pre>	print('&#123;0&#125;,haha,&#123;1&#125;'.format('a', 'b'))</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token list punctuation">2.</span> 源字符通过关键字的方式来获取数据</pre></td></tr><tr><td data-num="7"></td><td><pre>	print('&#123;name&#125;,haha'.format(name='乔鼎'))</pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token list punctuation">3.</span> 花括号的转义</pre></td></tr><tr><td data-num="9"></td><td><pre>	如果需要让大括号失去意义，只需要编成两个大括号即可</pre></td></tr></table></figure><ul>
+<li>格式化字符串</li>
+</ul>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>通过%的方式来匹配字符串和匹配对象之间的关系</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token list punctuation">1.</span> 格式化编码：</pre></td></tr><tr><td data-num="3"></td><td><pre>	s = 'this is a %c'%97</pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token list punctuation">2.</span> 格式化字符串:</pre></td></tr><tr><td data-num="5"></td><td><pre>	s = 'this is a %s'%'abc'</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token list punctuation">3.</span> 格式化整数</pre></td></tr><tr><td data-num="7"></td><td><pre>	s = 'this is a %d'%123</pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token list punctuation">4.</span> 格式化无符号八进制数</pre></td></tr><tr><td data-num="9"></td><td><pre>	s = 'this is a %o'%123</pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token list punctuation">5.</span> 格式化无符号十六进制数</pre></td></tr><tr><td data-num="11"></td><td><pre>	s = 'this is a %x'%123</pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token list punctuation">6.</span> 格式化定点数</pre></td></tr><tr><td data-num="13"></td><td><pre>	s = 'this is a %f'%123.0000004</pre></td></tr><tr><td data-num="14"></td><td><pre>	四舍五入保留六位</pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token list punctuation">7.</span> 格式化科学计数法</pre></td></tr><tr><td data-num="16"></td><td><pre>	s = 'this is a %e'%123.0000004</pre></td></tr></table></figure><ul>
+<li>转义字符</li>
+</ul>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>作用：拥有特殊含义的字符</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token list punctuation">1.</span> \t:横向制表符</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token list punctuation">2.</span> \n:换行</pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token list punctuation">3.</span> \v:纵向制表符</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token list punctuation">4.</span> \r:老版windows的换行</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token list punctuation">5.</span> \b:退格符</pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token list punctuation">6.</span> \f:换页符</pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/Python/" rel="tag"><i class="ic i-tag"></i> Python</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-08-30 12:36:53" itemprop="dateModified" datetime="2022-08-30T12:36:53+08:00">2022-08-30</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="赵浩栋 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="赵浩栋 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="赵浩栋 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>赵浩栋 <i class="ic i-at"><em>@</em></i>melt
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/computer-science/python/day4/" title="day4">http://example.com/computer-science/python/day4/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/computer-science/python/day3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh3brzpj20zk0m8ann.jpg" title="day3">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 计算机科学，Python</span>
+  <h3>day3</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/computer-science/python/day5/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeudstjqj20zk0m8k3r.jpg" title="day5">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 计算机科学，Python</span>
+  <h3>day5</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text"> 八大排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">1.1.</span> <span class="toc-text"> 列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%88%97%E8%A1%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 创建列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%88%97%E8%A1%A8%E9%87%8C%E9%9D%A2%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-number">1.1.1.1.</span> <span class="toc-text"> 访问列表里面的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%9E%BA%E6%97%8B%E5%A1%AB%E6%95%B0"><span class="toc-number">1.1.1.2.</span> <span class="toc-text"> 螺旋填数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%91%E5%88%97%E8%A1%A8%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="toc-number">1.1.1.3.</span> <span class="toc-text"> 向列表中添加元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-number">1.1.1.4.</span> <span class="toc-text"> 修改列表中的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-number">1.1.1.5.</span> <span class="toc-text"> 删除列表中的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%87%E7%89%87"><span class="toc-number">1.1.1.6.</span> <span class="toc-text"> 切片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.1.7.</span> <span class="toc-text"> 列表的常用运算符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E5%88%97%E8%A1%A8"><span class="toc-number">1.2.</span> <span class="toc-text"> 二维列表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%83%E7%BB%84"><span class="toc-number">2.</span> <span class="toc-text"> 元组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%86%E6%8B%AC%E5%8F%B7"><span class="toc-number">2.0.0.1.</span> <span class="toc-text"> 圆括号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%BB%84-2"><span class="toc-number">2.0.0.2.</span> <span class="toc-text"> 元组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%85%83%E7%BB%84"><span class="toc-number">2.0.0.3.</span> <span class="toc-text"> 创建一个元组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%85%83%E7%BB%84"><span class="toc-number">2.0.0.4.</span> <span class="toc-text"> 访问元组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0%E5%92%8C%E4%BF%AE%E6%94%B9%E4%BB%A5%E5%8F%8A%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-number">2.0.0.5.</span> <span class="toc-text"> 增加和修改以及删除元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E7%9A%84%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-number">2.0.0.6.</span> <span class="toc-text"> 元组的操作符</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">3.</span> <span class="toc-text"> 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="toc-number">3.0.1.</span> <span class="toc-text"> 图书管理系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">3.0.2.</span> <span class="toc-text"> 常用的方法</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/computer-science/python/day1/" rel="bookmark" title="day1">day1</a></li><li><a href="/computer-science/python/day2/" rel="bookmark" title="day2">day2</a></li><li><a href="/computer-science/python/day3/" rel="bookmark" title="day3">day3</a></li><li class="active"><a href="/computer-science/python/day4/" rel="bookmark" title="day4">day4</a></li><li><a href="/computer-science/python/day5/" rel="bookmark" title="day5">day5</a></li><li><a href="/computer-science/python/%E7%AC%94%E8%AE%B0%E5%A4%A7%E5%85%A8/" rel="bookmark" title="笔记大全">笔记大全</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="赵浩栋"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">赵浩栋</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">30</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">10</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">14</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tLw==" title="https:&#x2F;&#x2F;github.com&#x2F;"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLw==" title="https:&#x2F;&#x2F;music.163.com&#x2F;"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item stackoverflow" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS8=" title="https:&#x2F;&#x2F;stackoverflow.com&#x2F;"><i class="ic i-stack-overflow"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/computer-science/python/day3/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/computer-science/python/day5/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/VS-Code%E5%AE%89%E8%A3%85C++%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" title="VS-Code安装C++安装教程">VS-Code安装C++安装教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%E5%9F%BA%E4%BA%8EJavaWeb%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="基于JavaWeb的文件上传">基于JavaWeb的文件上传</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/arithmetic/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/arithmetic/course-1/" title="分类于 LeetCode">LeetCode</a>
+</div>
+
+    <span><a href="/arithmetic/LeetCode-26%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/" title="LeetCode-26删除排序数组中的重复项">LeetCode-26删除排序数组中的重复项</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/hello-world/" title="Hi guys">Hi guys</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/arithmetic/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/arithmetic/course-1/" title="分类于 LeetCode">LeetCode</a>
+</div>
+
+    <span><a href="/arithmetic/LeetCode-118%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/" title="LeetCode-118杨辉三角">LeetCode-118杨辉三角</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%EF%BC%8CPython/" title="分类于 计算机科学，Python">计算机科学，Python</a>
+</div>
+
+    <span><a href="/computer-science/python/day5/" title="day5">day5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%EF%BC%8CPython/" title="分类于 计算机科学，Python">计算机科学，Python</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%EF%BC%8CPython/python/" title="分类于 Python">Python</a>
+</div>
+
+    <span><a href="/computer-science/python/%E7%AC%94%E8%AE%B0%E5%A4%A7%E5%85%A8/" title="笔记大全">笔记大全</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/tools/" title="分类于 工具">工具</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/tools/course-1/" title="分类于 git">git</a>
+</div>
+
+    <span><a href="/Git%E4%BD%BF%E7%94%A8/" title="Git使用">Git使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/course-1/" title="分类于 理论">理论</a>
+</div>
+
+    <span><a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构">数据结构</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/arithmetic/" title="分类于 算法">算法</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/arithmetic/course-1/" title="分类于 LeetCode">LeetCode</a>
+</div>
+
+    <span><a href="/arithmetic/LeetCode-35%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/" title="LeetCode-35搜索插入位置">LeetCode-35搜索插入位置</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2021 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">赵浩栋 @ Melt</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">51k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">46 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'computer-science/python/day4/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
